@@ -40,7 +40,7 @@ exports.handler = async (event, context) => {
     });
     
     // Tambahan waktu sedikit untuk render JS framework (React/Vue hydration)
-    // await new Promise(r => setTimeout(r, 2000)); // Optional: Enable jika konten masih kosong
+    await new Promise(r => setTimeout(r, 5000)); // Wajib tunggu 5 detik agar konten muncul
 
     const content = await page.evaluate(() => document.body.innerText);
 
