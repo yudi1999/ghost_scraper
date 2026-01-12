@@ -1,0 +1,8 @@
+[build]
+  command = "echo 'Functions Only - Skipping Static Build'"
+  publish = "public"
+  functions = "netlify/functions"
+
+[functions]
+  node_bundler = "esbuild"
+  external_node_modules = ["@sparticuz/chromium", "puppeteer-core"]
